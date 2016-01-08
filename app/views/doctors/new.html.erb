@@ -1,6 +1,36 @@
 <%= form_for @doctor do |f| %>
-  <%= f.label :first_name, 'First Name' %>
-  <%= f.text_field :first_name %>
+
+    <%= f.label :first_name, 'First Name' %>
+    <%= f.text_field :first_name %>
+    <br>
+
+    <%= f.label :last_name, 'Last Name' %>
+    <%= f.text_field :last_name %>
+    <br>
+
+    <%= f.label :address, 'Address' %>
+    <%= f.text_field :address %>
+    <br>
+
+    <%= f.label :city, 'City' %>
+    <%= f.text_field :city %>
+    <br>
+
+    <%= f.label :state, 'State' %>
+    <%= f.text_field :state %>
+    <br>
+
+    <%= f.label :zip, 'Zip Code' %>
+    <%= f.text_field :zip %>
+    <br>
+
+    <%= f.label :school, 'School' %>
+    <%= f.text_field :school %>
+    <br>
+
+    <%= f.label :years_in_practice, 'Years in Practice' %>
+    <%= f.text_field :years_in_practice %>
+    <br>
 
   <%= f.submit %>
 

@@ -3,5 +3,14 @@
 <ul>
   <% @doctors.each do |doctor|%>
     <li><%= doctor.first_name %></li>
+    <li><%= doctor.last_name %></li>
+    <li><%= doctor.address %></li>
+    <li><%= doctor.city %></li>
+    <li><%= doctor.state %></li>
+    <li><%= doctor.zip %></li>
+    <li><%= doctor.school %></li>
+    <li><%= doctor.years_in_practice %></li>
+
+    <br>
   <% end %>
 </ul>
