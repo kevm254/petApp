@@ -1,5 +1,36 @@
-<h1> List All Pets </h1>
+<h1 class="text-center">Listing all Customers</h1>
+<span class="pull-right"><%= link_to 'Add Customer', new_customer_path, class: 'btn btn-success' %></span>
 
-<%= @pets.each do |pet| %>
-  <li><%= pet.name %></li>
-<% end %>
+<ul>
+  <table class="table table-striped">
+
+    <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone Number</th>
+      <th>Next Apt Date</th>
+      <th>Visit Reason</th>
+      <th class="text-center">Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @customers.each do |customer|%>
+        <tr>
+          <td><%= customer.first_name %></td>
+          <td><%= customer.last_name %></td>
+          <td><%= customer.phone_number %></td>
+          <td><%= customer.next_appointment_date %></td>
+          <td><%= customer.visit_reason %></td>
+          <td class="text-center">
+            <%= link_to 'More Info', customer_path(customer), class: 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_customer_path(customer), class: 'btn btn-success' %>
+            <%= link_to ' Delete', customer_path(customer), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+        </tr>
+    <% end %>
+    </tbody>
+
+  </table>
+
+</ul>

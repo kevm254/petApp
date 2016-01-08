@@ -1,6 +1,8 @@
 class CreatePetAssociations < ActiveRecord::Migration
   def change
-    update_table :pet do |t|
+    change_table :pets do |t|
+      t.references :customer, index: true
     end
+    add_foreign_key :pets, :customers
   end
 end

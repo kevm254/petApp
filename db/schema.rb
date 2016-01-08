@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160108103003) do
+ActiveRecord::Schema.define(version: 20160108185123) do
 
   create_table "appointments", force: :cascade do |t|
     t.date     "date_of_visit"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160108103003) do
     t.integer "phone_number"
     t.date    "next_appointment_date"
     t.string  "visit_reason"
+    t.integer "area_code"
   end
 
   create_table "doctors", force: :cascade do |t|
@@ -51,6 +52,9 @@ ActiveRecord::Schema.define(version: 20160108103003) do
     t.integer "age"
     t.integer "weight"
     t.date    "last_visited_date"
+    t.integer "customer_id"
   end
+
+  add_index "pets", ["customer_id"], name: "index_pets_on_customer_id"
 
 end
