@@ -1,3 +1,5 @@
 <%= form_for @doctor do |f| %>
   <%= render partial: 'form', locals: { f: f } %>
 <% end %>
+
+<%= link_to '< Go Back', doctors_path %>
