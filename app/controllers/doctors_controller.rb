@@ -29,10 +29,10 @@ class DoctorsController < ApplicationController
   def update
     @doctor= Doctor.find(params[:id])
     if @doctor.update(doctor_params)
-      flash[:success] = "Successfully updated!"
+      flash[:success] = 'Successfully updated!'
       redirect_to doctor_path(@doctor)
     else
-      flash[:danger] = "Was unable to update!"
+      flash[:danger] = 'Was unable to update!'
       render :edit
     end
   end

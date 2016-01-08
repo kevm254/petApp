@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Date of Visit</th>
+    <th>Pet</th>
+    <th>Customer</th>
+    <th>Appointment Reason</th>
+    <th>Visit Reason</th>
+    <th>Created At</th>
+    <th>Updated At</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <row>
+    <td><%= @appointment.date_of_visit %></td>
+    <td><%= @appointment.pet %></td>
+    <td><%= @appointment.customer %></td>
+    <td><%= @appointment.appointment_reason %></td>
+    <td><%= @appointment.visit_reason %></td>
+    <td><%= @appointment.created_at %></td>
+    <td><%= @appointment.updated_at %></td>
+  </row>
+  </tbody>
+</table>
+
+<br><%= link_to 'Go Back', appointments_path %>

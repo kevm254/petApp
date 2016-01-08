@@ -1,5 +1,38 @@
 <h1> List All Appointments </h1>
+<span class="pull-right"><%= link_to 'Add Appointment', new_appointment_path, class: 'btn btn-success' %></span>
 
-<%= @appointments.each do |appointment| %>
-  <li><%= appointment.name %></li>
-<% end %>
+
+<ul>
+  <table class="table table-striped">
+
+    <thead>
+    <tr>
+      <th>Visit Date</th>
+      <th>Customer</th>
+      <th>Pet</th>
+      <th>Visit Reason</th>
+      <th>Appt Reminder</th>
+      <th class="text-center">Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @appointments.each do |appointment|%>
+        <tr>
+          <td><%= appointment.date_of_visit %></td>
+          <td><%= appointment.customer %></td>
+          <td><%= appointment.pet %></td>
+          <td><%= appointment.visit_reason %></td>
+          <td><%= appointment.appointment_reminder %></td>
+          <td class="text-center">
+            <%= link_to 'More Info', appointment_path(appointment), class: 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_appointment_path(appointment), class: 'btn btn-success' %>
+            <%= link_to ' Delete', appointment_path(appointment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+        </tr>
+    <% end %>
+    </tbody>
+
+  </table>
+
+</ul>
+

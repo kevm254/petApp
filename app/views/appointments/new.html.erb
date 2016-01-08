@@ -1,0 +1,15 @@
+
+<h1 class="text-center">Create a New Appointment</h1>
+
+<div class="row">
+  <div class="panel panel-default">
+    <div class="col-md-5">
+      <%= form_for @appointment, class: 'form-horizontal' do |f| %>
+          <%= render partial: 'form', locals: { f: f } %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+<br><%= link_to 'Go Back', appointments_path %>
