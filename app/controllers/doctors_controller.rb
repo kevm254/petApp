@@ -10,10 +10,10 @@ class DoctorsController < ApplicationController
   def create
     @doctor = Doctor.new(doctor_params)
     if @doctor.save
-      flash[:success] = 'This was successfully created'
-      redirect_to doctor_path(@doctor)
+      flash[:success] = 'Successfully created!'
+      redirect_to doctors_path
     else
-      flash[:danger] = 'There were some errors'
+      flash[:danger] = 'Please fill in all of the fields'
       render :new
     end
   end
@@ -46,6 +46,6 @@ class DoctorsController < ApplicationController
 
   private
   def doctor_params
-    params.require(:doctor).permit(:first_name, :last_name, :address, :city, :state, :zip, :school)
+    params.require(:doctor).permit(:first_name, :last_name, :address, :city, :state, :zip, :school, :years_in_practice)
   end
 end

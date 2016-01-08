@@ -1,1 +1,3 @@
 Implementing bootstrap was frustrating because I had application.css.scss as application.scss.css and it wasns't correctly reading the bootstrap-sass, instead thinking of it as regular css. The problem fixed itself when I correctly switched it to application.css.scss.
+
+1 > Come back and fix the errors partial
