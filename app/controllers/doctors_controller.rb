@@ -12,7 +12,11 @@ class DoctorsController < ApplicationController
     if @doctor.save
       flash[:success] = 'This was successfully created'
       redirect_to doctors_url
+    else
+      flash[:danger] = 'There were some errors'
+      render :new
     end
+
   end
 
 
