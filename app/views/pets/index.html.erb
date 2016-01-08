@@ -1,5 +1,34 @@
-<h1> List All Pets </h1>
+<h1 class="text-center">Listing all pets</h1>
+<span class="pull-right"><%= link_to 'Add Pet', new_pet_path, class: 'btn btn-success' %></span>
 
-<%= @pets.each do |pet| %>
-  <li><%= pet.name %></li>
-<% end %>
+<ul>
+  <table class="table table-striped">
+
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Breed</th>
+      <th>Last Visited Date</th>
+      <th class="text-center">Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @pets.each do |pet|%>
+        <tr>
+          <td><%= pet.name %></td>
+          <td><%= pet.pet_type %></td>
+          <td><%= pet.breed %></td>
+          <td><%= pet.last_visited_date %></td>
+          <td class="text-center">
+            <%= link_to 'More Info', pet_path(pet), class: 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-success' %>
+            <%= link_to ' Delete', pet_path(pet), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+        </tr>
+    <% end %>
+    </tbody>
+
+  </table>
+
+</ul>

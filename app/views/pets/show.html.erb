@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Breed</th>
+    <th>Age</th>
+    <th>Weight</th>
+    <th>Last Visited</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <row>
+    <td><%= @pet.name %></td>
+    <td><%= @pet.pet_type %></td>
+    <td><%= @pet.breed %></td>
+    <td><%= @pet.age %></td>
+    <td><%= @pet.weight.to_s + ' lbs' %></td>
+    <td><%= @pet.last_visited_date %></td>
+
+  </row>
+  </tbody>
+</table>
+
+<br><%= link_to 'Go Back', pets_path %>

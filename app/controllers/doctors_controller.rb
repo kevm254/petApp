@@ -34,7 +34,6 @@ class DoctorsController < ApplicationController
     else
       flash[:danger] = "Was unable to update!"
       render :edit
-
     end
   end
 

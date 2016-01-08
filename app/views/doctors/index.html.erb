@@ -1,4 +1,6 @@
 <h1 class="text-center">Listing all doctors</h1>
+<span class="pull-right"><%= link_to 'Add Doctor', new_doctor_path, class: 'btn btn-success' %></span>
+
 
 <ul>
     <table class="table table-striped">
@@ -17,9 +19,8 @@
         <tr>
           <td><%= doctor.first_name %></td>
           <td><%= doctor.last_name %></td>
-          <td class><%= doctor.years_in_practice %></td>
+          <td><%= doctor.years_in_practice %></td>
           <td class="text-center">
-            <%= link_to 'Add Doctor', new_doctor_path, class: 'btn btn-success' %>
             <%= link_to 'More Info', doctor_path(doctor), class: 'btn btn-primary' %>
             <%= link_to 'Edit', edit_doctor_path(doctor), class: 'btn btn-success' %>
             <%= link_to ' Delete', doctor_path(doctor), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
