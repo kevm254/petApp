@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160108040441) do
+ActiveRecord::Schema.define(version: 20160108091534) do
 
   create_table "appointments", force: :cascade do |t|
     t.date     "date_of_visit"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 20160108040441) do
     t.string   "visit_reason"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.integer "phone_number"
+    t.date    "next_appointment_date"
+    t.string  "visit_reason"
   end
 
   create_table "doctors", force: :cascade do |t|
@@ -36,15 +44,7 @@ ActiveRecord::Schema.define(version: 20160108040441) do
     t.datetime "updated_at",        null: false
   end
 
-  create_table "table_customers", force: :cascade do |t|
-    t.string  "first_name"
-    t.string  "last_name"
-    t.integer "phone_number"
-    t.date    "next_appointment_date"
-    t.string  "visit_reason"
-  end
-
-  create_table "table_pets", force: :cascade do |t|
+  create_table "pets", force: :cascade do |t|
     t.string  "name"
     t.string  "type"
     t.string  "breed"
