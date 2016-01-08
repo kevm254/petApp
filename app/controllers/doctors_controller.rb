@@ -23,11 +23,19 @@ class DoctorsController < ApplicationController
   end
 
   def edit
-
+    @doctor = Doctor.find(params[:id])
   end
 
   def update
+    @doctor= Doctor.find(params[:id])
+    if @doctor.update(doctor_params)
+      flash[:success] = "Successfully updated!"
+      redirect_to doctor_path(@doctor)
+    else
+      flash[:danger] = "Was unable to update!"
+      render :edit
 
+    end
   end
 
   def destroy

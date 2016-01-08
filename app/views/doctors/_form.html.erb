@@ -1,34 +1,44 @@
 
-<%= f.label :first_name, 'First Name' %>
-<%= f.text_field :first_name %>
-<br>
+<div class="form-group">
+    <%= f.label :first_name, 'First Name', class: 'control-label' %>
+    <%= f.text_field :first_name, class: 'form-control' %>
+</div>
 
-<%= f.label :last_name, 'Last Name' %>
-<%= f.text_field :last_name %>
-<br>
 
-<%= f.label :address, 'Address' %>
-<%= f.text_field :address %>
-<br>
+<div class="form-group">
+    <%= f.label :last_name, 'Last Name', class: 'control-label' %>
+    <%= f.text_field :last_name, class: 'form-control' %>
+</div>
 
-<%= f.label :city, 'City' %>
-<%= f.text_field :city %>
-<br>
+<div class="form-group">
+  <%= f.label :address, 'Address', class: 'control-label' %>
+  <%= f.text_field :address, class: 'form-control' %>
+</div>
 
-<%= f.label :state, 'State' %>
-<%= f.text_field :state %>
-<br>
+<div class="form-group">
+  <%= f.label :city, 'City', class: 'control-label' %>
+  <%= f.text_field :city, class: 'form-control' %>
+</div>
 
-<%= f.label :zip, 'Zip Code' %>
-<%= f.text_field :zip %>
-<br>
+<div class="form-group">
+  <%= f.label :state, 'State', class: 'control-label' %>
+  <%= f.text_field :state, class: 'form-control' %>
+</div>
 
-<%= f.label :school, 'School' %>
-<%= f.text_field :school %>
-<br>
+<div class="form-group">
+  <%= f.label :zip, 'Zip Code', class: 'control-label' %>
+  <%= f.text_field :zip, class: 'form-control' %>
+</div>
 
-<%= f.label :years_in_practice, 'Years in Practice' %>
-<%= f.text_field :years_in_practice %>
-<br>
+<div class="form-group">
+  <%= f.label :school, 'School', class: 'control-label' %>
+  <%= f.text_field :school, class: 'form-control' %>
+</div>
 
-<%= f.submit %>
+<div class="form-group">
+  <%= f.label :years_in_practice, 'Years in Practice', class: 'control-label' %>
+    <%= f.text_field :years_in_practice, class: 'form-control' %>
+</div>
+
+<%= f.submit class: 'btn btn-success' %>
+
