@@ -1,4 +1,12 @@
-<%= link_to 'Doctors', doctors_path, class: 'btn btn-success' %>
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    <li><%= link_to 'Home', root_path%></li>
+    <li><%= link_to 'Doctors', doctors_path %></li>
+    <li><%= link_to 'New Doctor', new_doctor_path %></li>
+  </ul>
+</nav>
 
-<%= link_to 'New Doctor', new_doctor_path, class: 'btn btn-primary' %>
+
+
+
 
