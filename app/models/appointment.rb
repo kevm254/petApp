@@ -9,4 +9,12 @@ class Appointment < ActiveRecord::Base
             "Need to remind"
         end
     end
+
+    def date_of_visit_f
+        if date_of_visit
+            date_of_visit.strftime("%m/%d/%Y")
+        else
+            "N/A"
+        end
+    end
 end

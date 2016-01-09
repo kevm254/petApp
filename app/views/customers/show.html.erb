@@ -16,10 +16,23 @@
   </tbody>
 </table>
 
-Customer Pets
-<% @customer_pets.each do |pet| %>
-  <li><%= pet.name %></li>
-  <%= pet.inspect %>
-<% end %>
+
+<table>
+  <thead>
+  <tr>
+    <th>Pets</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @customer_pets.each do |pet| %>
+
+  <tr>
+    <td> <%= link_to "#{pet.name}", pet_path(pet) %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
 
 <br><%= link_to 'Go Back', pets_path %>

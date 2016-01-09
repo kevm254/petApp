@@ -15,4 +15,20 @@ class Pet < ActiveRecord::Base
   def get_doctor
     get_apt.doctor
   end
+
+  def last_visited_date_f
+    if self.last_visited_date
+       self.last_visited_date.strftime('%m/%d/%Y')
+    else
+      'N/A'
+    end
+  end
+
+  def next_appointment_date_f
+    if self.next_appointment_date
+      self.next_appointment_date.strftime('%m/%d/%Y')
+    else
+      'N/A'
+    end
+  end
 end

@@ -13,3 +13,5 @@ migrations solely manipulate the database. It's the associations that you decide
 one technique used to pass information between different controllers is to use the flash message.
 
 if you keep wondering why certain fields aren't showing up, make sure you've whitelisted that param
+
+nilclass probably means there is a missing association somewhere. check whether the ids on the joining table are filled in

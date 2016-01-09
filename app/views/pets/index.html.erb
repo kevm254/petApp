@@ -20,7 +20,7 @@
           <td><%= pet.name %></td>
           <td><%= pet.breed %></td>
           <td><%= if pet.customer != nil then pet.customer.full_name end%></td>
-          <td><%= pet.next_appointment_date %></td>
+          <td><%= pet.next_appointment_date_f %></td>
           <td class="text-center">
             <%= link_to 'More Info', pet_path(pet), class: 'btn btn-primary' %>
             <%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-success' %>
