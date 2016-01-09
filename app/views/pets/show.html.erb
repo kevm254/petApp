@@ -34,7 +34,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><%= link_to "#{@pet.customer.first_name + ' ' + @pet.customer.last_name}" %></td>
+      <td><%= link_to "#{@pet.customer.first_name + ' ' + @pet.customer.last_name}", @pet.customer %></td>
     </tr>
   </tbody>
 </table>

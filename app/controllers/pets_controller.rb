@@ -4,6 +4,7 @@ class PetsController < ApplicationController
   end
 
   def new
+    @customer_id = flash[:customer_id]
     @pet = Pet.new
   end
 
@@ -45,6 +46,6 @@ class PetsController < ApplicationController
 
   private
   def pet_params
-    params.require(:pet).permit(:name, :pet_type, :breed, :age, :weight, :last_visited_date, :next_appointment_date)
+    params.require(:pet).permit(:name, :pet_type, :breed, :age, :weight, :last_visited_date, :next_appointment_date, :customer_id)
   end
 end

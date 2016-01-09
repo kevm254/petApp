@@ -20,12 +20,12 @@
     <tbody>
     <% @appointments.each do |appointment|%>
         <tr>
-          <td><%= appointment.customer.full_name %></td>
-          <td><%= appointment.pet %></td>
+          <td><%= Pet.find(appointment.pet).customer.full_name %></td>
+          <td><%= appointment.pet.name %></td>
           <td><%= appointment.doctor.full_name %></td>
           <td><%= appointment.date_of_visit %></td>
           <td><%= appointment.visit_reason %></td>
-          <td><%= appointment.appointment_reminder %></td>
+          <td><%= appointment.reminder %></td>
           <td class="text-center">
             <%= link_to 'More Info', appointment_path(appointment), class: 'btn btn-primary' %>
             <%= link_to 'Edit', edit_appointment_path(appointment), class: 'btn btn-success' %>

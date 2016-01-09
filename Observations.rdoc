@@ -9,3 +9,7 @@ Implementing bootstrap was frustrating because I had application.css.scss as app
 
 
 migrations solely manipulate the database. It's the associations that you decide to give in the model that gives the model class their methods. for example, to say a dog is owned by the customer, you have to go into the dog model and put belongs_to
+
+one technique used to pass information between different controllers is to use the flash message.
+
+if you keep wondering why certain fields aren't showing up, make sure you've whitelisted that param
