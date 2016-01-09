@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :customers
   resources :appointments
 
+  get 'secretary/' => 'secretary#index'
+
 end

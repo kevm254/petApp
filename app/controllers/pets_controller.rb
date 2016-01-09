@@ -4,6 +4,7 @@ class PetsController < ApplicationController
   end
 
   def new
+    # Passes the customer id to the form
     @customer_id = flash[:customer_id]
     @pet = Pet.new
   end
@@ -12,7 +13,7 @@ class PetsController < ApplicationController
     @pet = Pet.new(pet_params)
     if @pet.save
       flash[:success] = 'Successfully created!'
-      redirect_to pets_path
+      redirect_to appointments_path
     else
       flash[:danger] = 'Please fill in all of the fields'
       render :new
@@ -21,6 +22,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @customer_id = @pet.customer_id
   end
 
   def edit
@@ -46,6 +48,6 @@ class PetsController < ApplicationController
 
   private
   def pet_params
-    params.require(:pet).permit(:name, :pet_type, :breed, :age, :weight, :last_visited_date, :next_appointment_date, :customer_id)
+    params.require(:pet).permit(:name, :pet_type, :breed, :age, :weight, :last_visited_date, :next_appointment_date, :customer_id, :doctor_id)
   end
 end

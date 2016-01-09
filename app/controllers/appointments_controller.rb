@@ -5,6 +5,10 @@ class AppointmentsController < ApplicationController
 
   def new
     @appointment = Appointment.new
+
+    # Gets the pet id after being sent from the previous form
+    @pet_id = flash[:pet_id]
+
   end
 
   def create

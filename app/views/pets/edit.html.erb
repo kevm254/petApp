@@ -1,5 +1,5 @@
 <%= form_for @pet do |f| %>
-    <%= render partial: 'form', locals: { f: f } %>
+    <%= render partial: 'form', locals: { f: f, custom_id: @customer_id } %>
 <% end %>
 
 <br><%= link_to 'Go Back', pets_path %>

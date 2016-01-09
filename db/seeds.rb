@@ -37,16 +37,6 @@ Doctor.create([
 #########################################
 # customers
 #########################################
-Customer.create({
-                  first_name: 'Jerry',
-                  last_name: 'Madden',
-                  phone_number_a: '234',
-                  phone_number_b: '3234',
-                  next_appointment_date: '2014-12-14',
-                  visit_reason: 'Dog is laughing nonstop',
-                  area_code: '214'
-                })
-
 
 
 ###########################################

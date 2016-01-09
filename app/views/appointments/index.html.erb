@@ -18,18 +18,18 @@
     </thead>
 
     <tbody>
-    <% @appointments.each do |appointment|%>
+    <% @appointments.each do |appt|%>
         <tr>
-          <td><%= Pet.find(appointment.pet).customer.full_name %></td>
-          <td><%= appointment.pet.name %></td>
-          <td><%= appointment.doctor.full_name %></td>
-          <td><%= appointment.date_of_visit %></td>
-          <td><%= appointment.visit_reason %></td>
-          <td><%= appointment.reminder %></td>
+          <td> <%= appt.pet.customer.full_name %></td>
+          <td> <%= appt.pet.name %></td>
+          <td> <%= appt.doctor.full_name %></td>
+          <td> <%= appt.date_of_visit %></td>
+          <td> <%= appt.visit_reason %></td>
+          <td> <%= appt.reminder %></td>
           <td class="text-center">
-            <%= link_to 'More Info', appointment_path(appointment), class: 'btn btn-primary' %>
-            <%= link_to 'Edit', edit_appointment_path(appointment), class: 'btn btn-success' %>
-            <%= link_to ' Delete', appointment_path(appointment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+            <%= link_to 'More Info', appointment_path(appt), class: 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_appointment_path(appt), class: 'btn btn-success' %>
+            <%= link_to ' Delete', appointment_path(appt), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
         </tr>
     <% end %>
     </tbody>

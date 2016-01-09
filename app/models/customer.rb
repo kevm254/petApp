@@ -1,8 +1,6 @@
 class Customer < ActiveRecord::Base
-  has_many :pets
-
-
-
+  has_many :pets, dependent: :destroy
+  
   def full_name
     self.first_name + ' '  + self.last_name
   end
