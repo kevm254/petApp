@@ -1,0 +1,11 @@
+1 > Come back and fix the errors partial
+
+Implementing bootstrap was frustrating because I had application.css.scss as application.scss.css and it wasns't correctly reading the bootstrap-sass, instead thinking of it as regular css. The problem fixed itself when I correctly switched it to application.css.scss.
+
+> Another interesting observation I've found? Don't name any of your columns 'type'. It will give you an ActiveRecord error.
+
+
+> undefined nil for nilclass errors usually mean you aren't passing an instance variable to the view
+
+
+migrations solely manipulate the database. It's the associations that you decide to give in the model that gives the model class their methods. for example, to say a dog is owned by the customer, you have to go into the dog model and put belongs_to

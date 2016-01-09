@@ -7,6 +7,13 @@ class CustomersController < ApplicationController
     @customer = Customer.new
   end
 
+  def show
+    @customer = Customer.find(params[:id])
+
+    #Find associated pets
+    @customer_pets = Pet.where(customer_id: @customer.id)
+  end
+
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
@@ -26,8 +33,10 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
     if @customer.update(customer_params)
       flash[:success] = 'Successfully updated!'
+      redirect_to customer_path(@customer)
     else
       flash[:danger] = 'Was unable to update'
+      render :edit
     end
   end
 
@@ -38,6 +47,6 @@ class CustomersController < ApplicationController
 
   private
   def customer_params
-    params.require(:customer).permit(:first_name, :last_name, :phone_number, :next_appointment_date, :visit_reason, :area_code)
+    params.require(:customer).permit(:first_name, :last_name, :phone_number_a, :phone_number_b, :visit_reason, :area_code)
   end
 end

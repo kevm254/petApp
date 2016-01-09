@@ -6,6 +6,7 @@
     <th>Breed</th>
     <th>Age</th>
     <th>Weight</th>
+    <th>Next Appointment Date</th>
     <th>Last Visited</th>
   </tr>
   </thead>
@@ -17,10 +18,26 @@
     <td><%= @pet.breed %></td>
     <td><%= @pet.age %></td>
     <td><%= @pet.weight.to_s + ' lbs' %></td>
+    <td><%= @pet.next_appointment_date %></td>
     <td><%= @pet.last_visited_date %></td>
 
   </row>
   </tbody>
 </table>
 
-<br><%= link_to 'Go Back', pets_path %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= link_to "#{@pet.customer.first_name + ' ' + @pet.customer.last_name}" %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<%= link_to 'Go Back', pets_path %>

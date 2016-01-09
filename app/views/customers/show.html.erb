@@ -4,8 +4,6 @@
     <th>First Name</th>
     <th>Last Name</th>
     <th>Phone Number</th>
-    <th>Next Appt Date</th>
-    <th>Visit Reason</th>
   </tr>
   </thead>
 
@@ -13,11 +11,15 @@
   <row>
     <td><%= @customer.first_name %></td>
     <td><%= @customer.last_name %></td>
-    <td><%= @customer.phone_number %></td>
-    <td><%= @customer.next_appointment_date %></td>
-    <td><%= @customer.visit_reason %></td>
+    <td><%= @customer.phone_number_a.to_s %></td>
   </row>
   </tbody>
 </table>
+
+Customer Pets
+<% @customer_pets.each do |pet| %>
+  <li><%= pet.name %></li>
+  <%= pet.inspect %>
+<% end %>
 
 <br><%= link_to 'Go Back', pets_path %>

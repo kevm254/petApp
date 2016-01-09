@@ -1,8 +1,0 @@
-1 > Come back and fix the errors partial
-
-Implementing bootstrap was frustrating because I had application.css.scss as application.scss.css and it wasns't correctly reading the bootstrap-sass, instead thinking of it as regular css. The problem fixed itself when I correctly switched it to application.css.scss.
-
-> Another interesting observation I've found? Don't name any of your columns 'type'. It will give you an ActiveRecord error.
-
-
-> undefined nil for nilclass errors usually mean you aren't passing an instance variable to the view

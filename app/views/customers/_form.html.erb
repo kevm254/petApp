@@ -7,27 +7,18 @@
   <%= f.label :last_name, 'Last Name', class: 'control-label' %>
   <%= f.text_field :last_name, class: 'form-control' %>
 </div>
+  <div class="form-inline">
+    <%= f.label :area_code, 'Area Code', class: 'control-label' %>
 
-<div class="form-group">
-  <%= f.label :area_code, 'Area Code', class: 'control-label' %>
-  <%= f.number_field :area_code, class: 'form-control' %>
+    <%= f.label :phone_number, 'Phone Number', class: 'control-label' %>
+    <br>
+    <%= f.number_field :area_code, class: 'form-control' %>
+    <%= f.number_field :phone_number_a, class: 'form-control' %>
+    <%= f.number_field :phone_number_b, class: 'form-control' %>
+  </div>
+  <br>
+  <%= f.submit class: 'btn btn-success' %>
+
 </div>
 
-<div class="form-group">
-  <%= f.label :phone_number, 'Phone Number', class: 'control-label' %>
-  <%= f.number_field :phone_number, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-  <%= f.label :next_appointment_date, 'Next Appt Date', class: 'control-label' %>
-  <%= f.date_field :next_appointment_date, class: 'form-control' %>
-</div>
-
-<div class="form-group">
-  <%= f.label :visit_reason, 'Visit Reason', class: 'control-label' %>
-  <%= f.text_field :next_appointment_date, class: 'form-control' %>
-</div>
-
-<%= f.submit class: 'btn btn-success' %>
-
-
+<br>

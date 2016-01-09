@@ -1,10 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#########################################
+# customers
+#########################################
 Doctor.create([
                   {
                     first_name: 'Samuel',
@@ -38,12 +34,54 @@ Doctor.create([
                   }
               ])
 
+#########################################
+# customers
+#########################################
+Customer.create({
+                  first_name: 'Jerry',
+                  last_name: 'Madden',
+                  phone_number_a: '234',
+                  phone_number_b: '3234',
+                  next_appointment_date: '2014-12-14',
+                  visit_reason: 'Dog is laughing nonstop',
+                  area_code: '214'
+                })
 
-    # first_name: '',
-    # last_name: '',
-    # address: '',
-    # city: '',
-    # state: '',
-    # zip: '',
-    # school: '',
-    # years_in_practice: ''
+
+
+###########################################
+# templates
+###########################################
+
+###########################################
+#
+###########################################
+
+#DOCTOR TEMPLATE
+# first_name: '',
+# last_name: '',
+# address: '',
+# city: '',
+# state: '',
+# zip: '',
+# school: '',
+# years_in_practice: ''
+
+
+#CUSTOMER TEMPLATE
+# first_name: '',
+# last_name: '',
+# phone_number: '',
+# next_appointment_date: '',
+# visit_reason: '',
+# area_code: ''
+
+#PET TEMPLATE
+# name: '',
+# pet_type: '',
+# breed: '',
+# age: '',
+# weight: '',
+# last_visited_date: '',
+# customer_id: ''
+

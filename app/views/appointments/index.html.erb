@@ -9,6 +9,7 @@
     <tr>
       <th>Customer</th>
       <th>Pet</th>
+      <th>Assigned Doctor</th>
       <th>Visit Date</th>
       <th>Visit Reason</th>
       <th>Appt Reminder</th>
@@ -19,8 +20,9 @@
     <tbody>
     <% @appointments.each do |appointment|%>
         <tr>
-          <td><%= appointment.customer %></td>
+          <td><%= appointment.customer.full_name %></td>
           <td><%= appointment.pet %></td>
+          <td><%= appointment.doctor.full_name %></td>
           <td><%= appointment.date_of_visit %></td>
           <td><%= appointment.visit_reason %></td>
           <td><%= appointment.appointment_reminder %></td>
