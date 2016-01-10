@@ -31,4 +31,8 @@ class Pet < ActiveRecord::Base
       'N/A'
     end
   end
+
+  def pet_and_owner_name
+    'Pet: ' + self.name + ' - ' + 'Owner: ' + self.customer.full_name
+  end
 end

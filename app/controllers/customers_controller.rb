@@ -10,7 +10,7 @@ class CustomersController < ApplicationController
   def show
     @customer = Customer.find(params[:id])
 
-    #Find associated pets
+    #Find customer's associated pets
     @customer_pets = Pet.where(customer_id: @customer.id)
   end
 
@@ -18,7 +18,6 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
     if @customer.save
       flash[:message] = 'Successfully created!'
-      flash[:customer_id] = @customer.id
       redirect_to new_pet_path
     else
       flash[:message] = 'Please fill in all of the fields'

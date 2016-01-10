@@ -5,10 +5,6 @@ class AppointmentsController < ApplicationController
 
   def new
     @appointment = Appointment.new
-
-    # Gets the pet id after being sent from the previous form
-    @pet_id = flash[:pet_id]
-
   end
 
   def create
@@ -49,6 +45,6 @@ class AppointmentsController < ApplicationController
 
   private
   def appointment_params
-    params.require(:appointment).permit(:date_of_visit, :pet, :customer, :appointment_reminder, :visit_reason)
+    params.require(:appointment).permit(:date_of_visit, :pet, :customer, :appointment_reminder, :visit_reason, :doctor_id, :pet_id)
   end
 end

@@ -17,6 +17,7 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-body {
-  background: url('./assets/dogbg.jpg');
+.jumbotron {
+  background: url('http://localhost:3000/assets/dogbg.jpg');
+  color: white;
 }
