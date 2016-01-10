@@ -1,6 +1,6 @@
 class Pet < ActiveRecord::Base
   belongs_to :customer
-  has_many :appointments
+  has_many :appointments, dependent: :destroy
   has_many :doctors, through: :appointments
 
   # ENSURES PRESENCE
@@ -13,7 +13,9 @@ class Pet < ActiveRecord::Base
   end
 
   def get_doctor
-    get_apt.doctor
+    unless get_apt.nil?
+      get_apt.doctor
+    end
   end
 
   def last_visited_date_f
@@ -33,6 +35,6 @@ class Pet < ActiveRecord::Base
   end
 
   def pet_and_owner_name
-    'Pet: ' + self.name + ' - ' + 'Owner: ' + self.customer.full_name
+    self.customer.full_name + '  (Pet Name: ' + self.name + '-- ' + self.breed + ')'
   end
 end

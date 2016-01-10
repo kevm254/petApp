@@ -36,7 +36,7 @@
   <tbody>
     <tr>
       <td><%= link_to "#{@pet.customer.full_name}", @pet.customer %></td>
-      <td><%= @pet.get_doctor.full_name %></td>
+      <td><%= if @pet.get_doctor then @pet.get_doctor.full_name end %></td>
     </tr>
   </tbody>
 </table>

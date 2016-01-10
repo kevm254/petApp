@@ -13,6 +13,13 @@
 </div>
 
 <div class="form-group">
+  <%= f.label :customer_id, 'Pet\'s Owner', class: 'control-label'  %>
+  <div class="controls">
+    <%= collection_select(:pet, :customer_id, Customer.all, :id, :full_name) %>
+  </div>
+</div>
+
+<div class="form-group">
   <%= f.label :breed, 'Breed', class: 'control-label' %>
   <%= f.text_field :breed, class: 'form-control' %>
 </div>

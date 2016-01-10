@@ -13,7 +13,6 @@ class PetsController < ApplicationController
     @pet = Pet.new(pet_params)
     if @pet.save
       flash[:success] = 'Successfully created!'
-      redirect_to appointments_path
     else
       flash[:danger] = 'Please fill in all of the fields'
       render :new
