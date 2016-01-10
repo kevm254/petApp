@@ -10,7 +10,7 @@
       <th>Customer</th>
       <th>Pet</th>
       <th>Assigned Doctor</th>
-      <th>Visit Date</th>
+      <th>Apt Date</th>
       <th>Visit Reason</th>
       <th>Appt Reminder</th>
       <th class="text-center">Actions</th>
@@ -18,18 +18,18 @@
     </thead>
 
     <tbody>
-    <% @appointments.each do |appt|%>
+    <% @appointments.each do |apt|%>
         <tr>
-          <td> <%= appt.pet.customer.full_name %></td>
-          <td> <%= appt.pet.name %></td>
-          <td> <%= appt.doctor.full_name %></td>
-          <td> <%= appt.date_of_visit_f %></td>
-          <td> <%= appt.visit_reason %></td>
-          <td> <%= appt.reminder %></td>
+          <td> <%= apt.pet.customer.full_name %></td>
+          <td> <%= apt.pet.name %></td>
+          <td> <%= apt.doctor.full_name %></td>
+          <td> <%= apt.date_of_visit_f %></td>
+          <td> <%= apt.visit_reason %></td>
+          <td> <%= apt.reminder %></td>
           <td class="text-center">
-            <%= link_to 'More Info', appointment_path(appt), class: 'btn btn-primary' %>
-            <%= link_to 'Edit', edit_appointment_path(appt), class: 'btn btn-success' %>
-            <%= link_to ' Delete', appointment_path(appt), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+            <%= link_to 'More Info', appointment_path(apt), class: 'btn btn-primary' %>
+            <%= link_to 'Edit', edit_appointment_path(apt), class: 'btn btn-success' %>
+            <%= link_to 'Delete', appointment_path(apt), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
         </tr>
     <% end %>
     </tbody>

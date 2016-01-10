@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160109055102) do
+ActiveRecord::Schema.define(version: 20160110204635) do
 
   create_table "appointments", force: :cascade do |t|
     t.date     "date_of_visit"
     t.string   "pet"
     t.string   "customer"
-    t.boolean  "appointment_reminder"
+    t.boolean  "appointment_reminder", default: false
     t.string   "visit_reason"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.integer  "pet_id"
     t.integer  "doctor_id"
   end

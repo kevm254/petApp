@@ -4,9 +4,11 @@ class Appointment < ActiveRecord::Base
 
     def reminder
         if self.appointment_reminder
-            "Completed"
+            "Reminder Sent"
         else
-            "Need to remind"
+            #Gets the difference between now and apt date
+            date_diff = (self.date_of_visit - Date.today).to_i
+                "Need to remind in #{ date_diff.to_s + ' ' + 'day'.pluralize(date_diff) }"
         end
     end
 

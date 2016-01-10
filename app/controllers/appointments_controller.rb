@@ -35,6 +35,9 @@ class AppointmentsController < ApplicationController
       flash[:danger] = 'Was unable to update!'
       render :edit
     end
+
+    def apt_reminder
+    end
   end
 
   def destroy
