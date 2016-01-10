@@ -8,7 +8,9 @@
 
 <div class="form-group">
   <%= f.label :pet_type, 'Pet Type', class: 'control-label' %>
-  <%= f.select(:pet_type, options_for_select([['Bird', 'Bird'],[ 'Cat', 'Cat'], ['Dog', 'Dog']])) %>
+  <div class="controls">
+    <%= f.select(:pet_type, options_for_select([['Bird', 'Bird'],[ 'Cat', 'Cat'], ['Dog', 'Dog']])) %>
+  </div>
 </div>
 
 <div class="form-group">
@@ -34,10 +36,16 @@
 <div class="form-group">
   <%= f.label :last_visited_date, 'Last Visited Date', class: 'control-label' %>
   <%= f.date_field :last_visited_date, class: 'form-control' %>
-
-  <%= f.hidden_field :customer_id, value: custom_id %>
-  <%= f.hidden_field :doctor_id, value: 1 %>
 </div>
+
+<div class="form-group">
+  <%= f.label :customer_id, 'Owner', class: 'control-label' %>
+  <div class="controls">
+    <%= collection_select(:pet, :customer_id, Customer.all, :id, :full_name, {}, { :multiple => false }) %>
+  </div>
+</div>
+
+
 
 
 
