@@ -27,6 +27,7 @@ class PetsController < ApplicationController
 
   def edit
     @pet = Pet.find(params[:id])
+    @customer_id = @pet.customer_id
   end
 
   def update

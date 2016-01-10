@@ -7,8 +7,8 @@
 
 
 <div class="form-group">
-  <%= f.label :pet_type, 'Pet type', class: 'control-label' %>
-  <%= f.text_field :pet_type, class: 'form-control' %>
+  <%= f.label :pet_type, 'Pet Type', class: 'control-label' %>
+  <%= f.select(:pet_type, options_for_select([['Bird', 'Bird'],[ 'Cat', 'Cat'], ['Dog', 'Dog']])) %>
 </div>
 
 <div class="form-group">

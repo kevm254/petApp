@@ -11,7 +11,7 @@
 
   <tbody>
   <row>
-    <td><%= @appointment.date_of_visit %></td>
+    <td><%= @appointment.date_of_visit_f %></td>
     <td><%= @appointment.pet.name %></td>
     <td><%= Pet.find(@appointment.pet).customer.full_name %></td>
     <td><%= @appointment.reminder %></td>
