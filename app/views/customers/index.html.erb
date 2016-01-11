@@ -1,5 +1,4 @@
 <h1 class="text-center">Listing all Customers</h1>
-<span class="pull-right"><%= link_to 'Add Customer', new_customer_path, class: 'btn btn-success' %></span>
 
 <ul>
   <table class="table table-striped">
@@ -10,7 +9,8 @@
       <th>Last Name</th>
       <th>Phone Number</th>
       <th>Pets</th>
-      <th class="text-center">Actions</th>
+      <th role="buttons"><%= link_to 'New', new_customer_path, class: 'btn btn-success' %></a>
+      </th>
     </tr>
     </thead>
 
@@ -20,15 +20,18 @@
           <td><%= customer.first_name %></td>
           <td><%= customer.last_name %></td>
           <td><%= customer.full_phone_number %>
-          <td></td></td>
-          <td class="text-center">
-            <%= link_to 'More Info', customer_path(customer), class: 'btn btn-primary' %>
-            <%= link_to 'Edit', edit_customer_path(customer), class: 'btn btn-success' %>
-            <%= link_to ' Delete', customer_path(customer), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+          <td><%= customer.get_pets.find_each do |pet| pet.name end %></td>
+          <td><%= render partial: 'customers/btn_actions', locals: { customer: customer } %></td>
+
+
+
         </tr>
+
     <% end %>
     </tbody>
 
   </table>
 
 </ul>
+
+

@@ -10,6 +10,10 @@ class Customer < ActiveRecord::Base
   end
 
   def get_pets
-    Pet.find_all(customer_id: self.id)
+    # pets = Pet.find_by(customer_id: self.id)
+    pets = Pet.where(customer_id: self.id)
+    if pets
+      pets
+    end
   end
 end

@@ -1,0 +1,12 @@
+<div class="dropup">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <div class="glyphicon glyphicon-th"></div>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><%= link_to 'Customer Profile', customer_path(customer) %></li>
+    <li role="separator" class="divider"></li>
+    <li><%= link_to 'Edit', edit_customer_path(customer) %></li>
+    <li><%= link_to ' Delete', customer_path(customer), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </ul>
+</div>

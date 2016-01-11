@@ -1,6 +1,8 @@
 class CustomersController < ApplicationController
   def index
     @customers = Customer.all
+    #@customer_pets = Pet.where(customer_id: @customer.id)
+
   end
 
   def new

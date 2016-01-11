@@ -37,6 +37,7 @@ class AppointmentsController < ApplicationController
     end
 
     def apt_reminder
+
     end
   end
 
