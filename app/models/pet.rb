@@ -44,11 +44,11 @@ class Pet < ActiveRecord::Base
       next_apt_date = next_apt.date_of_visit
       next_apt_date.strftime('%m/%d/%Y')
     else
-      'N/A'
+      '* Not currently scheduled.'
     end
   end
 
   def pet_and_owner_name
-    self.customer.full_name + '  (Pet Name: ' + self.name + '-- ' + self.breed + ')'
+    self.customer.full_name + ' -- (Pet Name: ' + self.name + ' - ' + self.breed + ')'
   end
 end

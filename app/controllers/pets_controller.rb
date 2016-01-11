@@ -4,8 +4,6 @@ class PetsController < ApplicationController
   end
 
   def new
-    # Passes the customer id to the form
-    @customer_id = flash[:customer_id]
     @pet = Pet.new
   end
 

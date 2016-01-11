@@ -16,8 +16,9 @@ class Customer < ActiveRecord::Base
   end
 
   def get_pets
-    # pets = Pet.find_by(customer_id: self.id)
-    pets = Pet.where(customer_id: self.id)
+    #pets = Pet.find_by(customer_id: self.id)
+     pets = Pet.where(customer_id: self.id)
+    # If a pet exists, return the pets property
     if pets
       pets
     end

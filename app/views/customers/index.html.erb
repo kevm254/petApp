@@ -20,10 +20,17 @@
           <td><%= customer.first_name %></td>
           <td><%= customer.last_name %></td>
           <td><%= customer.full_phone_number %>
-          <td><%= customer.get_pets.find_each do |pet| pet.name end %></td>
+          <!-- ensure .name is called on an object that exists -->
+          <td><% pet = Pet.where(customer_id: customer.id) %>
+              <% pet.each do |pet| %>
+              <%= pet.name %><br>
+              <% end %>
+          </td>
+          <td></td>
+
+
+
           <td class="text-center"><%= render partial: 'customers/btn_actions', locals: { customer: customer } %></td>
-
-
 
         </tr>
 

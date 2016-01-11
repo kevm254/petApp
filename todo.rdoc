@@ -1,2 +1,6 @@
 clean up database for extra columns
 change dropdown menu defaults
+finish up validations on customers name and phone number and add validations for appointment date
+finish up views for each user
+
+fix 'pet new' link

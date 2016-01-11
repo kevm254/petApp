@@ -28,8 +28,12 @@
   <tbody>
   <% @customer_pets.each do |pet| %>
     <tr>
-      <td> <%= link_to "#{pet.name}", pet_path(pet) %></td>
-      <td></td>
+      <td><%= link_to "#{pet.name}", pet_path(pet) %></td>
+      <td><% apt = Appointment.where(pet_id: pet.id) %>
+          <% apt.each do |apt| %>
+          <li><%= apt.visit_reason %></li>
+          <% end %>
+      </td>
   </tr>
   <% end %>
   </tbody>
