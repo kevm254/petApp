@@ -13,7 +13,6 @@
       <th>Last Name</th>
       <th>Phone Number</th>
       <th>Pets</th>
-      <th class="text-center"><%= link_to '', new_customer_path, class: 'btn btn-success glyphicon glyphicon-plus' %></a>
       </th>
     </tr>
     </thead>
@@ -31,7 +30,6 @@
             <% end %>
           </td>
 
-          <td class="text-center"><%= render partial: 'customers/btn_actions', locals: { customer: customer } %></td>
 
         </tr>
 
