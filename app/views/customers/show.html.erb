@@ -15,13 +15,14 @@
   </row>
   </tbody>
 </table>
+<br><br>
 
 
 <table class="table striped">
   <thead>
   <tr>
     <th>Pets</th>
-    <th>Visit Reason</th>
+    <th>Appointment Information</th>
   </tr>
   </thead>
 
@@ -31,7 +32,11 @@
       <td><%= link_to "#{pet.name}", pet_path(pet) %></td>
       <td><% apt = Appointment.where(pet_id: pet.id) %>
           <% apt.each do |apt| %>
-          <li><%= apt.visit_reason %></li>
+          - Apt scheduled for <strong><%= apt.date_of_visit_f.to_s %></strong>
+            with <strong>Dr. <%= apt.doctor.last_name %></strong>
+
+          due to following reason: <em><%= apt.visit_reason%></em>
+          <br>
           <% end %>
       </td>
   </tr>

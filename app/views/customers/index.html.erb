@@ -23,12 +23,9 @@
           <!-- ensure .name is called on an object that exists -->
           <td><% pet = Pet.where(customer_id: customer.id) %>
               <% pet.each do |pet| %>
-              <%= pet.name %><br>
+              <%= link_to "#{ pet.name }", pet_path(pet) %><br>
               <% end %>
           </td>
-          <td></td>
-
-
 
           <td class="text-center"><%= render partial: 'customers/btn_actions', locals: { customer: customer } %></td>
 

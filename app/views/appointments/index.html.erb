@@ -18,7 +18,7 @@
     <tbody>
     <% @appointments.each do |apt|%>
         <tr>
-          <td> <%= apt.pet.customer.full_name %></td>
+          <td> <%= link_to "#{apt.pet.customer.full_name}", customer_path(apt.pet.customer) %></td>
           <td> <%= apt.pet.name %></td>
           <td> <%= apt.doctor.full_name %></td>
           <td> <%= apt.date_of_visit_f %></td>

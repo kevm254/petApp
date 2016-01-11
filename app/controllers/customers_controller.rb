@@ -18,7 +18,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
     if @customer.save
       flash[:message] = 'Successfully created!'
-      redirect_to new_pet_path
+      redirect_to navigation_secretaries_path
     else
       flash[:message] = 'Please fill in all of the fields'
       render new
