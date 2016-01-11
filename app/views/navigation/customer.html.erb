@@ -13,7 +13,7 @@
       <th>Last Name</th>
       <th>Phone Number</th>
       <th>Pets</th>
-      </th>
+      <th></th>
     </tr>
     </thead>
 
@@ -29,15 +29,12 @@
                 <%= link_to "#{ pet.name }", pet_path(pet) %><br>
             <% end %>
           </td>
-
-
+          <td><%= link_to 'More Info', customer_path(customer), class: 'btn btn-success' %></td>
         </tr>
-
     <% end %>
     </tbody>
 
   </table>
 
 </ul>
-
 
