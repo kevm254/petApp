@@ -13,7 +13,7 @@ class AppointmentsController < ApplicationController
       flash[:success] = 'Successfully created!'
       redirect_to appointments_path
     else
-      flash[:danger] = 'Please fill in all of the fields'
+      flash[:danger] = 'Unable to save!'
       render :new
     end
   end

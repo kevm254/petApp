@@ -17,11 +17,11 @@ class CustomersController < ApplicationController
   def create
     @customer = Customer.new(customer_params)
     if @customer.save
-      flash[:message] = 'Successfully created!'
+      flash[:success] = 'Successfully created!'
       redirect_to navigation_secretaries_path
     else
-      flash[:message] = 'Please fill in all of the fields'
-      render new
+      flash[:danger] = 'Unable to save!'
+      render :new
     end
   end
 

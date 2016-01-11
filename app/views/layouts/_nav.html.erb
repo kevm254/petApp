@@ -1,8 +1,7 @@
 <nav class="navbar navbar-inverse justified">
   <ul class="nav navbar-nav navbar-left">
     <li><%= link_to 'Home', root_path%></li>
-    <li><%= link_to 'Users', navigation_path %></li>
-
+    <%= render 'layouts/nav_dropdown' %>
   </ul>
 
   <ul class="nav navbar-nav navbar-right">

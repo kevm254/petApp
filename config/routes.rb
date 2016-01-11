@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get 'appointments/apt' => 'appointments#apt_reminder'
 
   # Custom Routes for Navigation
-  get 'navigation/' => 'navigation#index'
   get 'navigation/customers' => 'navigation#customer'
   get 'navigation/doctors' => 'navigation#doctor'
   get 'navigation/secretaries' => 'navigation#secretary'

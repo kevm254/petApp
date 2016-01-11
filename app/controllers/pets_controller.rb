@@ -13,7 +13,7 @@ class PetsController < ApplicationController
       flash[:success] = 'Successfully created!'
       redirect_to navigation_secretaries_path
     else
-      flash[:danger] = 'Please fill in all of the fields'
+      flash[:danger] = 'Unable to save!'
       render :new
     end
   end
@@ -32,7 +32,7 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     if @pet.update(pet_params)
       flash[:success] = 'Successfully updated!'
-      redirect_to pet_path(@pet)
+      redirect_to pets_path(@pet)
     else
       flash[:danger] = 'Was unable to update!'
       render :edit

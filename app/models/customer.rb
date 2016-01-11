@@ -4,10 +4,13 @@ class Customer < ActiveRecord::Base
 
 
   ##### VALIDATIONS
+  # ENSURES PRESENCE OF FIELDS
+  validates :first_name, :last_name, :area_code, :phone_number_a, :phone_number_b, presence: true
+
   # ENSURES PROPER RANGE
   validates :phone_number_a, length: { maximum: 3 }
   validates :phone_number_b, length: { maximum: 4 }
-  validates :first_name, :last_name, length: { maximum: 17 }
+  validates :first_name, :last_name, length: { minimum: 2, maximum: 17 }
 
 
   ##### UTILITY METHODS

@@ -4,7 +4,7 @@
   <div class="panel panel-default">
     <div class="col-md-5">
       <%= form_for @customer, class: 'form-horizontal' do |f| %>
-          <%= render partial: 'form', locals: { f: f } %>
+          <%= render partial: 'form', locals: { f: f, customer: @customer } %>
       <% end %>
     </div>
   </div>

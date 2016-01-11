@@ -1,8 +1,4 @@
 class NavigationController < ApplicationController
-  def index
-    @search = C
-  end
-
   def customer
   end
 
