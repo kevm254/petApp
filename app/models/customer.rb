@@ -12,7 +12,7 @@ class Customer < ActiveRecord::Base
   end
 
   def full_phone_number
-    '(' + self.area_code.to_s + ')' + self.phone_number_a.to_s + '-' + self.phone_number_b.to_s
+    '(' + self.area_code.to_s + ')' + ' ' + self.phone_number_a.to_s + '-' + self.phone_number_b.to_s
   end
 
   def get_pets
