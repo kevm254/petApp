@@ -11,6 +11,11 @@ class Pet < ActiveRecord::Base
   validates :name, length: { maximum: 35 }
   validates :breed, length: { maximum: 35 }
 
+  # ENSURES PROPER PET TYPE
+  pet_type_regex = /\A(?:(dog)|(cat)|(bird))\Z/
+  validates :pet_type,  :presence => true,
+            :format => { :with => pet_type_regex }
+
 
   ##### UTILITY METHODS
   # gets the appointment

@@ -1,3 +1,4 @@
+<%= render partial: 'pets/errors' %>
 
 <div class="form-group">
   <%= f.label :name, 'Name', class: 'control-label' %>
@@ -8,7 +9,7 @@
 <div class="form-group">
   <%= f.label :pet_type, 'Pet Type', class: 'control-label' %>
   <div class="controls">
-      <%= f.select(:pet_type, options_for_select([['Bird', 'Bird'],[ 'Cat', 'Cat'], ['Dog', 'Dog']])) %>
+      <%= f.select(:pet_type, options_for_select([['Bird', 'bird'],[ 'Cat', 'cat'], ['Dog', 'dog']])) %>
   </div>
 </div>
 

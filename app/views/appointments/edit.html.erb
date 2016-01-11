@@ -1,5 +1,5 @@
 <%= form_for @appointment do |f| %>
-    <%= render partial: 'form', locals: { f: f } %>
+    <%= render partial: 'form', locals: { f: f, appointment: @appointment } %>
 <% end %>
 
 <br><%= link_to 'Go Back', appointments_path %>

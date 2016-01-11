@@ -1,11 +1,4 @@
-<% if customer.errors.any? %>
-    <div class="alert alert-danger">
-      <% customer.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-      <% end %>
-    </div>
-<% end %>
-
+<%= render partial: 'customers/errors' %>
 
 <div class="form-group">
   <%= f.label :first_name, 'First Name', class: 'control-label' %>

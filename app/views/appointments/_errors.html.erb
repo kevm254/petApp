@@ -1,0 +1,10 @@
+<% if @appointment.errors.any? %>
+    <div class="alert alert-danger">
+    <h2><%= pluralize(@appointment.errors.count, 'error') %> prohibited this appointment from being saved:</h2>
+          <ul>
+            <% @appointment.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+     </div>
+<% end %>
