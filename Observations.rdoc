@@ -15,3 +15,5 @@ one technique used to pass information between different controllers is to use t
 if you keep wondering why certain fields aren't showing up, make sure you've whitelisted that param
 
 nilclass probably means there is a missing association somewhere. check whether the ids on the joining table are filled in
+
+When using dropdown menus, make sure to make the menu default on the previously stored value because it can cause users to mistakenly change information without their knowledge if the menu always defaults to the first option

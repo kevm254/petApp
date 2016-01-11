@@ -9,7 +9,7 @@
       <th>Last Name</th>
       <th>Phone Number</th>
       <th>Pets</th>
-      <th role="buttons"><%= link_to 'New', new_customer_path, class: 'btn btn-success' %></a>
+      <th class="text-center"><%= link_to '', new_customer_path, class: 'btn btn-success glyphicon glyphicon-plus' %></a>
       </th>
     </tr>
     </thead>
@@ -21,7 +21,7 @@
           <td><%= customer.last_name %></td>
           <td><%= customer.full_phone_number %>
           <td><%= customer.get_pets.find_each do |pet| pet.name end %></td>
-          <td><%= render partial: 'customers/btn_actions', locals: { customer: customer } %></td>
+          <td class="text-center"><%= render partial: 'customers/btn_actions', locals: { customer: customer } %></td>
 
 
 

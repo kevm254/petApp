@@ -8,12 +8,12 @@
   <%= f.text_field :last_name, class: 'form-control' %>
 </div>
   <div class="form-inline">
-    <%= f.label :area_code, 'Area Code', class: 'control-label' %>
+    <%= f.label :area_code, '(Area Code)', class: 'control-label' %>
 
     <%= f.label :phone_number, 'Phone Number', class: 'control-label' %>
     <br>
     <%= f.number_field :area_code, class: 'form-control' %>
-    <%= f.number_field :phone_number_a, class: 'form-control' %>
+    <%= f.number_field :phone_number_a, class: 'form-control' %> <strong>-</strong>
     <%= f.number_field :phone_number_b, class: 'form-control' %>
   </div>
   <br>

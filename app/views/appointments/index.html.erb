@@ -1,6 +1,4 @@
 <h1 class="text-center"> List All Appointments </h1>
-<span class="pull-right"><%= link_to 'Add Appointment', new_appointment_path, class: 'btn btn-success' %></span>
-
 
 <ul>
   <table class="table table-striped">
@@ -13,7 +11,7 @@
       <th>Apt Date</th>
       <th>Visit Reason</th>
       <th>Appt Reminder</th>
-      <th class="text-center">Actions</th>
+      <th class="text-center"><%= link_to '', new_appointment_path, class: 'btn btn-success glyphicon glyphicon-plus' %></th>
     </tr>
     </thead>
 
@@ -26,10 +24,7 @@
           <td> <%= apt.date_of_visit_f %></td>
           <td> <%= apt.visit_reason %></td>
           <td> <%= apt.reminder %></td>
-          <td class="text-center">
-            <%= link_to 'More Info', appointment_path(apt), class: 'btn btn-primary' %>
-            <%= link_to 'Edit', edit_appointment_path(apt), class: 'btn btn-success' %>
-            <%= link_to 'Delete', appointment_path(apt), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+          <td class="text-center"><%= render partial: 'appointments/btn_actions', locals: { apt: apt } %></td>
 
 
         </tr>

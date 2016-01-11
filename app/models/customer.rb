@@ -1,6 +1,12 @@
 class Customer < ActiveRecord::Base
+  ##### ASSOCIATIONS
   has_many :pets, dependent: :destroy
-  
+
+
+  ##### VALIDATIONS
+
+
+  ##### UTILITY METHODS
   def full_name
     self.first_name + ' '  + self.last_name
   end

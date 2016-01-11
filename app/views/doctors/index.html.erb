@@ -1,16 +1,15 @@
 <h1 class="text-center">Listing all doctors</h1>
-<span class="pull-right"><%= link_to 'Add Doctor', new_doctor_path, class: 'btn btn-success' %></span>
 
 
 <ul>
     <table class="table table-striped">
 
       <thead>
-      <tr>
+        <tr>
           <th>First Name</th>
           <th>Last Name</th>
           <th>Years In Practice</th>
-          <th class="text-center">Actions</th>
+          <th class="text-center"><%= link_to '', new_doctor_path, class: 'btn btn-success glyphicon glyphicon-plus' %></th>
         </tr>
       </thead>
 
@@ -20,14 +19,10 @@
           <td><%= doctor.first_name %></td>
           <td><%= doctor.last_name %></td>
           <td><%= doctor.years_in_practice %></td>
-          <td class="text-center">
-            <%= link_to 'More Info', doctor_path(doctor), class: 'btn btn-primary' %>
-            <%= link_to 'Edit', edit_doctor_path(doctor), class: 'btn btn-success' %>
-            <%= link_to ' Delete', doctor_path(doctor), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+          <td class="text-center"><%= render partial: 'doctors/btn_actions', locals: { doctor: doctor } %></td>
         </tr>
       <% end %>
-  </tbody>
-
+      </tbody>
     </table>
 
 </ul>

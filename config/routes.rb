@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   # route for appointment reminder
   get 'appointments/apt' => 'appointments#apt_reminder'
 
-  get 'secretary/' => 'secretary#index'
+  get 'navigation/' => 'navigation#index'
 
 end

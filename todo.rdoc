@@ -1,1 +1,2 @@
-remove doctor_id from pets table since they are related with a through association
+clean up database for extra columns
+change dropdown menu defaults

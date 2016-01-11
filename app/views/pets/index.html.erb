@@ -1,5 +1,4 @@
 <h1 class="text-center">Listing all pets</h1>
-<span class="pull-right"><%= link_to 'Add Pet', new_pet_path, class: 'btn btn-success' %></span>
 
 <ul>
   <table class="table table-striped">
@@ -11,7 +10,8 @@
       <th>Breed</th>
       <th>Owner</th>
       <th>Next Apt Date</th>
-      <th class="text-center">Actions</th>
+      <th class="text-center"><%= link_to '', new_doctor_path, class: 'btn btn-success glyphicon glyphicon-plus' %></th>
+
     </tr>
     </thead>
 
@@ -23,10 +23,8 @@
           <td><%= pet.breed %></td>
           <td><%= if pet.customer != nil then pet.customer.full_name end%></td>
           <td><%= pet.next_appointment_date_f %></td>
-          <td class="text-center">
-            <%= link_to 'More Info', pet_path(pet), class: 'btn btn-primary' %>
-            <%= link_to 'Edit', edit_pet_path(pet), class: 'btn btn-success' %>
-            <%= link_to ' Delete', pet_path(pet), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+          <td class="text-center"><%= render partial: 'pets/btn_actions', locals: { pet: pet } %></td>
+
         </tr>
     <% end %>
     </tbody>
