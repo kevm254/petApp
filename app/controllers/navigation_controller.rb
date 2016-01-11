@@ -1,5 +1,6 @@
 class NavigationController < ApplicationController
   def customer
+    @customers = Customer.all
   end
 
   def secretary
