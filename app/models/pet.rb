@@ -5,7 +5,7 @@ class Pet < ActiveRecord::Base
 
   ##### VALIDATIONS
   # ENSURES PRESENCE
-  validates :name, :pet_type, :breed, :age, :weight, :last_visited_date, :next_appointment_date, :customer_id, presence: true
+  validates :name, :pet_type, :breed, :age, :weight, :last_visited_date, :customer_id, presence: true
 
   # ENSURES PROPER RANGE
   validates :name, length: { maximum: 35 }
