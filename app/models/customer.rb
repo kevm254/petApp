@@ -4,6 +4,10 @@ class Customer < ActiveRecord::Base
 
 
   ##### VALIDATIONS
+  # ENSURES PROPER RANGE
+  validates :phone_number_a, length: { maximum: 3 }
+  validates :phone_number_b, length: { maximum: 4 }
+  validates :first_name, :last_name, length: { maximum: 17 }
 
 
   ##### UTILITY METHODS

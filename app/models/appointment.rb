@@ -3,6 +3,9 @@ class Appointment < ActiveRecord::Base
   # ENSURES PRESENCE
   validates :date_of_visit, :pet_id, :doctor_id, :visit_reason, presence: true
 
+  # DATE VALIDATION
+    validates_date :date_of_visit, :on_or_after => lambda { Date.current }
+
   belongs_to :doctor
   belongs_to :pet
 
