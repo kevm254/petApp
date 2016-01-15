@@ -5,21 +5,29 @@ class Customer < ActiveRecord::Base
 
   ##### VALIDATIONS
   # ENSURES PRESENCE OF FIELDS
-  validates :first_name, :last_name, :area_code, :phone_number_a, :phone_number_b, presence: true
+  validates :first_name, :last_name, :phone_number, presence: true
 
   # ENSURES PROPER RANGE
-  validates :phone_number_a, length: { maximum: 3 }
-  validates :phone_number_b, length: { maximum: 4 }
+  validates :phone_number, length: { maximum: 10 }
   validates :first_name, :last_name, length: { minimum: 2, maximum: 17 }
 
 
   ##### UTILITY METHODS
   def full_name
-    self.first_name + ' '  + self.last_name
+    first_name + ' '  + last_name
   end
 
   def full_phone_number
-    '(' + self.area_code.to_s + ')' + ' ' + self.phone_number_a.to_s + '-' + self.phone_number_b.to_s
+    unless phone_number.nil?
+      return "(#{phone_number[0,3]})-#{phone_number[3,3]}-#{phone_number[6, 4]}"
+      phone_number
+    else
+      return "N/A"
+    end
+  end
+
+  def phone_number=(value)
+    write_attribute(:phone_number, value.gsub(/[^0-9]/i, ''))
   end
 
   def get_pets

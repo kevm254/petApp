@@ -4,3 +4,6 @@ finish up validations on customers name and phone number and add validations for
 finish up views for each user
 
 fix 'pet new' link
+
+FINISHED
+* fixed phone number formatting
