@@ -1,0 +1,36 @@
+.uppercase {
+  text-transform: uppercase;
+}
+
+.font-french-fell
+{
+  font-family: 'IM Fell French Canon', serif;
+}
+
+// NAVBAR ////////////////
+.navbar {
+
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, .9);
+
+}
+
+// MAIN PAGE ////////////
+
+
+.jumbotron {
+  background-color: rgba(0,0,0, .75);
+  color: white;
+  margin: auto;
+  width: 90%;
+
+}
+
+#home {
+
+  height: 100vh;
+
+  background-image: image-url('dogbg.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
