@@ -18,7 +18,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
     if @customer.save
       flash[:success] = 'Successfully created!'
-      redirect_to navigation_secretaries_path
+      redirect_to customer_path(@customer)
     else
       flash[:danger] = 'Unable to save!'
       render :new

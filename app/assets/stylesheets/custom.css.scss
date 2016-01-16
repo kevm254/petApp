@@ -22,15 +22,19 @@
   background-color: rgba(0,0,0, .75);
   color: white;
   margin: auto;
-  width: 90%;
+  width: 70%;
+  border-radius: 17px;
 
 }
 
 #home {
-
   height: 100vh;
-
   background-image: image-url('dogbg.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+.plain-links {
+  text-decoration: none;
+  color: white;
 }
