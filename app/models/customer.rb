@@ -14,15 +14,16 @@ class Customer < ActiveRecord::Base
 
   ##### UTILITY METHODS
   def full_name
-    first_name + ' '  + last_name
+    "#{first_name} #{last_name}"
   end
 
   def full_phone_number
     unless phone_number.nil?
-      return "(#{phone_number[0,3]})-#{phone_number[3,3]}-#{phone_number[6, 4]}"
-      phone_number
+      # return formatted phone number
+      "(#{phone_number[0,3]})-#{phone_number[3,3]}-#{phone_number[6, 4]}"
     else
-      return "N/A"
+      # no number in the system
+      "N/A"
     end
   end
 

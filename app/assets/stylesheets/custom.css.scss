@@ -16,10 +16,13 @@
 }
 
 // MAIN PAGE ////////////
-
+html, body {
+  height: 100%;
+}
 
 .jumbotron {
-  background-color: rgba(0,0,0, .75);
+  padding-top: 2%;
+  background-color: rgba(0, 0, 20, .8);
   color: white;
   margin: auto;
   width: 70%;
@@ -29,12 +32,12 @@
 
 #home {
   height: 100vh;
-  background-image: image-url('dogbg.jpg');
-  background-size: 100%;
-  background-repeat: no-repeat;
+  background: gray image-url('dogbg.jpg') no-repeat bottom center;
+  background-size: cover;
 }
 
 .plain-links {
   text-decoration: none;
   color: white;
 }
+
