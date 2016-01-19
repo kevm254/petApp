@@ -16,7 +16,7 @@ body {
 .navbar {
 
   margin-bottom: 0;
-  background: rgba(0, 0, 0, .9);
+  background: rgba(0, 0, 0, 1);
 
 }
 
@@ -28,20 +28,23 @@ html, body {
 }
 
 .jumbotron {
-  padding-top: 1%;
-  background-color: rgba(0, 0, 20, .8);
+  padding-top: 4%;
+  background-color: rgba(0, 0, 20, .7);
+  background: linear-gradient(to top, rgba(255,255,255,0), rgba(0,0,0,1));
   color: white;
   margin: auto;
-  width: 55%;
+  margin-top: -3%;
+  width: 100%;
   border-color: white;
   border-width: 5px;
   line-height: 150%;
 }
 
 .jumbotron h1 {
-  margin-bottom: 1%;
+  margin-bottom: 4%;
   padding: 0;
-  color: white
+  color: white;
+  font-size: 70px;
 }
 
 .jumbotron h3 {
@@ -49,17 +52,16 @@ html, body {
 }
 
 .jumbotron .btn {
-  background-color: transparent;
-  border-width: 2px;
-  border-color: lightblue;
+  background-color: blue;
+  border-color: blue;
   font-size: 22px;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 
 
 #home {
-  height: 75vh;
-  background: gray image-url('dogbg.jpg') no-repeat bottom center;
+  height: 85vh;
+  background: gray image-url('dogbg.jpg') no-repeat center;
   background-size: cover;
 }
 
