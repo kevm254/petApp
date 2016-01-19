@@ -38,6 +38,8 @@ html, body {
   border-color: white;
   border-width: 5px;
   line-height: 150%;
+  height: 500px;
+
 }
 
 .jumbotron h1 {
@@ -52,15 +54,19 @@ html, body {
 }
 
 .jumbotron .btn {
-  background-color: blue;
-  border-color: blue;
+  background-color: transparent;
   font-size: 22px;
+  border: 4px;
+  border-color: white;
   border-radius: 8px;
+  background-color: rgba(0,0,0,.45);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
 #home {
-  height: 85vh;
+  height: 100vh;
   background: gray image-url('dogbg.jpg') no-repeat center;
   background-size: cover;
 }
