@@ -1,3 +1,8 @@
+body {
+  font-size: 22px;
+  line-height: 150%;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -21,14 +26,25 @@ html, body {
 }
 
 .jumbotron {
-  padding-top: 2%;
+  padding-top: 1%;
   background-color: rgba(0, 0, 20, .8);
   color: white;
   margin: auto;
-  width: 70%;
+  width: 55%;
   border-radius: 17px;
-
+  line-height: 150%;
 }
+
+.jumbotron h1 {
+  margin-bottom: 1%;
+  padding: 0;
+  color: white
+}
+
+.jumbotron h3 {
+  color: lightblue;
+}
+
 
 #home {
   height: 100vh;

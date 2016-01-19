@@ -11,6 +11,9 @@ class Customer < ActiveRecord::Base
   validates :phone_number, length: { maximum: 10 }
   validates :first_name, :last_name, length: { minimum: 2, maximum: 17 }
 
+  # VALIDATES UNIQUENESS
+
+
 
   ##### UTILITY METHODS
   def full_name

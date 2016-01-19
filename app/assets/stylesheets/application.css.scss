@@ -12,10 +12,12 @@
  *
  * require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'custom';
+
 @import url('https://www.google.com/fonts#UsePlace:use/Collection:IM+Fell+French+Canon');
 

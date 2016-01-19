@@ -1,0 +1,4 @@
+- Use font size between 15 and 25 pixels.
+- Use big font sizes for headlines
+- Linespacing should be around 150%
+- 45 to 90 characters per line

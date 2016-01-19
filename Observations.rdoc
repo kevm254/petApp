@@ -21,3 +21,6 @@ use background-image: image-url('custom.jpg')  to directly access images you nee
 
 background: gray image-url('dogbg.jpg') no-repeat bottom center; use words like bottom center, etc to shift around
 big images if you need to move them around when you are using them as a background image.
+
+
+
